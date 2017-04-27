@@ -50,7 +50,8 @@
     
     
     NSString *testImg = @"testImg家就搜到几哦啊是大家哦给偶加欧艾斯都拿上好我我奇偶我奇偶我Joi你";
-    
+   
+    //图片
     UIImage *newImg = [UIImage createOtherMerchantImage:testImg withBgImage:[UIImage createImageWithColor:[UIColor whiteColor]] withFont:22 withTextColor:[UIColor redColor] imageSize:CGSizeMake(200, 100)];
 
     
