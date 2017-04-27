@@ -26,16 +26,6 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor lightGrayColor];
-    
-    
-    id dic = @"qweqwe";
-    @try {
-         NSString *test =  [dic objectForKey:@"hh"];
-    } @catch (NSException *exception) {
-        
-    } @finally {
-        
-    }
    
     
     NSString *const XMPP_DOMAIN = @"jianyezuqiu.cn";
