@@ -26,19 +26,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor lightGrayColor];
-    
-    
-    id dic = @"qweqwe";
-    @try {
-         NSString *test =  [dic objectForKey:@"hh"];
-    } @catch (NSException *exception) {
-        
-    } @finally {
-        
-    }
    
-
-
     
     NSString *const XMPP_DOMAIN = @"jianyezuqiu.cn";
     NSString * const XMPP_HOST_NAME = @"chat.jianyezuqiu.cn";
@@ -98,5 +86,6 @@
     NSString *strSoundFile = [[NSBundle mainBundle] pathForResource:@"8619" ofType:@"wav"];
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:strSoundFile],&soundID);
     AudioServicesPlaySystemSound(soundID);
+    NSLog(@"send message");
 }
 @end
