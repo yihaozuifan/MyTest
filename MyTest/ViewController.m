@@ -37,8 +37,6 @@
         
     }
    
-
-
     
     NSString *const XMPP_DOMAIN = @"jianyezuqiu.cn";
     NSString * const XMPP_HOST_NAME = @"chat.jianyezuqiu.cn";
@@ -98,7 +96,6 @@
     NSString *strSoundFile = [[NSBundle mainBundle] pathForResource:@"8619" ofType:@"wav"];
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:strSoundFile],&soundID);
     AudioServicesPlaySystemSound(soundID);
-    
-    NSLog(@"这是什么东西啊");
+    NSLog(@"send message");
 }
 @end
