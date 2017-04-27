@@ -27,8 +27,7 @@
     
     self.view.backgroundColor = [UIColor lightGrayColor];
    
-    
-    SLog(@"shads");
+
     
     NSString *const XMPP_DOMAIN = @"jianyezuqiu.cn";
     NSString * const XMPP_HOST_NAME = @"chat.jianyezuqiu.cn";
