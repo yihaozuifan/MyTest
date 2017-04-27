@@ -30,9 +30,6 @@
 + (UIImage *)createOtherMerchantImage:(NSString *)str withBgImage:(UIImage *)image withFont:(CGFloat)fontSize withTextColor:(UIColor *)textColor imageSize:(CGSize)imageSize
 
 {
-    
-    //    UIImage *image = [ UIImage imageNamed:@"otherMerchantHeaderBg" ];
-    
     CGSize size= CGSizeMake (imageSize.width , imageSize.height ); // 画布大小
     
     UIGraphicsBeginImageContextWithOptions (size, NO , 0.0 );
@@ -40,18 +37,13 @@
     [image drawAtPoint : CGPointMake ( 0 , 0 )];
     
     // 获得一个位图图形上下文
-    
     CGContextRef context= UIGraphicsGetCurrentContext ();
     
     CGContextDrawPath (context, kCGPathStroke );
     
-    //画自己想画的内容。。。。。
-    
     NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
     paragraphStyle.lineBreakMode = NSLineBreakByCharWrapping;
     paragraphStyle.alignment = NSTextAlignmentCenter;
-    
-    //    [str drawAtPoint : CGPointMake ( image. size . width * 0.4 , image. size . height * 0.4 ) withAttributes : @{ NSFontAttributeName :[ UIFont fontWithName : @"Arial-BoldMT" size : 50 ], NSForegroundColorAttributeName :[ UIColor blackColor ],NSParagraphStyleAttributeName:paragraphStyle} ];
     
     UIFont  *font = [UIFont boldSystemFontOfSize:fontSize];//定义默认字体
     //计算文字的宽度和高度：支持多行显示
@@ -68,10 +60,6 @@
     
     //[ UIFont fontWithName : @"Arial-BoldMT" size : fontSize ]
     [str drawInRect:rect withAttributes:@{ NSFontAttributeName :[UIFont systemFontOfSize:fontSize], NSForegroundColorAttributeName :textColor,NSParagraphStyleAttributeName:paragraphStyle} ];
-
-    //画自己想画的内容。。。。。
-    
-    // 返回绘制的新图形
     
     UIImage *newImage= UIGraphicsGetImageFromCurrentImageContext ();
     
@@ -156,13 +144,11 @@
     bitmapData = (uint32_t *)malloc(bufferLength);
     
     if(!bitmapData) {
-        NSLog(@"Error allocating memory for bitmap\n");
         CGColorSpaceRelease(colorSpace);
         return NULL;
     }
     
     //Create bitmap context
-    
     context = CGBitmapContextCreate(bitmapData,
                                     width,
                                     height,
