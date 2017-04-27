@@ -34,7 +34,7 @@
     } @catch (NSException *exception) {
         
     } @finally {
-        
+        NSLog(@"shads");
     }
    
     
